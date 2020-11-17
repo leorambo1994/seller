@@ -1,0 +1,28 @@
+<!-- <a [routerLink]= "['./product-list']" routerLinkActive = "router-link-active" class = "btn btn-primary"   >  商品列表 </a>
+<a [routerLink]= "['./product-create']" routerLinkActive = "router-link-active" class = "btn btn-danger"   >  添加商品 </a>
+<router-outlet></router-outlet> -->
+
+
+<nz-layout>
+
+  <app-topbar></app-topbar>
+
+  <nz-layout>
+    <nz-sider nzWidth="200px" nzTheme="light">
+
+      <app-leftbar></app-leftbar>
+      
+    </nz-sider>
+    <nz-layout class="inner-layout">
+      <nz-breadcrumb>
+        <nz-breadcrumb-item>Home</nz-breadcrumb-item>
+        <nz-breadcrumb-item>List</nz-breadcrumb-item>
+        <nz-breadcrumb-item>App</nz-breadcrumb-item>
+      </nz-breadcrumb>
+      <nz-content style="min-height: 600px;">
+        <!-- Content -->
+        <router-outlet></router-outlet>
+      </nz-content>
+    </nz-layout>
+  </nz-layout>
+</nz-layout>

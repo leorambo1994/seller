@@ -1,0 +1,27 @@
+<nz-header>
+    <div class="logo"></div>
+    <ul nz-menu nzTheme="dark" nzMode="horizontal" class="header-menu">
+
+      <li nz-menu-item nzSelected>
+        <a [routerLink]="['/product-list']" routerLinkActive="router-link-active" >
+          <i nz-icon nzType="appstore" nzTheme="outline"></i>
+          商品中心
+        </a>
+      </li>
+
+      <li nz-menu-item>
+        <a [routerLink]="['/product-create']" routerLinkActive="router-link-active" >
+          <i nz-icon nzType="appstore-add" nzTheme="outline"></i>
+          添加商品
+        </a>
+      </li>
+
+      <li nz-menu-item>
+        <a [routerLink]="['/product-detail']" routerLinkActive="router-link-active" >
+          <i nz-icon nzType="ordered-list" nzTheme="outline"></i>
+          订单中心
+        </a>
+      </li>
+
+    </ul>
+  </nz-header>
