@@ -16,12 +16,6 @@ import { ProductEditComponent } from './product-edit/product-edit.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { FormsModule,ReactiveFormsModule } from "@angular/forms";
 
-import { DragDropModule } from '@angular/cdk/drag-drop';
-import { ScrollingModule } from '@angular/cdk/scrolling';
-import { HttpClientJsonpModule,HttpClientModule } from '@angular/common/http';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { BrowserModule } from '@angular/platform-browser';
-
 // antd
 import { DemoNgZorroAntdModule } from '../ng-zorro-antd.module';
 import en from '@angular/common/locales/en';
@@ -65,12 +59,6 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => antDesign
      // 引入图标必加此 module
     NzIconModule
 
-    // HttpClientJsonpModule,
-    // ScrollingModule,
-    // DragDropModule,
-    // BrowserModule,
-    // BrowserAnimationsModule,
-    // HttpClientModule
   ],
 
   bootstrap: [ AdminComponent ],

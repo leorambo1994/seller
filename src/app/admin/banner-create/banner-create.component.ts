@@ -15,7 +15,7 @@ export class BannerCreateComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private service: BannerService
+    private bannerService: BannerService
   ) {
     this.myForm = new FormGroup({
 
@@ -29,7 +29,7 @@ export class BannerCreateComponent implements OnInit {
 
   onSubmit() {
     if (this.myForm.valid) {
-      this.service.createBanner(this.myForm.value).subscribe(data => {
+      this.bannerService.createBanner(this.myForm.value).subscribe(data => {
         // 此处应该返回到商品列表页面
         this.router.navigate(['/admin/banner-list']);
 

@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
-// import { Product } from "./product";
 
 @Injectable({
   providedIn: 'root'
@@ -29,7 +28,7 @@ export class ProductService {
     return this.http.post(this.baseUrl , obj);
   }
 
-  // 修改商品
+  // 修改商品b 
 
   updateProduct( id , obj ){
     return this.http.put(this.baseUrl + '/' + id , obj );

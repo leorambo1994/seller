@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from "../product.service";
-import { Product } from "../product";
 import { Router } from "@angular/router";
 import { NzModalService } from "ng-zorro-antd/modal";
 
@@ -12,35 +11,22 @@ import { NzModalService } from "ng-zorro-antd/modal";
 })
 export class ProductListComponent implements OnInit {
 
-  // products: Product[];
   products : any = [];
 
   constructor(
     private modal: NzModalService,
     private router: Router,
-    private service: ProductService) {
+    private productService: ProductService) {
 
   }
 
   ngOnInit(): void {
-    this.service.getProducts()
+    this.productService.getProducts()
       .subscribe(data => {
         this.products = data;
         console.log("获取到商品：", this.products);
       })
   }
-
-  addProduct() {
-
-  }
-
-  // 编辑商品
-  // editProduct(product: Product) {
-
-  //   localStorage.removeItem("key_edit_product");
-  //   localStorage.setItem("key_edit_product", product.id.toString());
-  //   this.router.navigate(['product-edit']);
-  // }
 
   // 删除商品
   deleteProduct(id) {
@@ -54,7 +40,7 @@ export class ProductListComponent implements OnInit {
       nzOnOk: () => {
         console.log('OK');
 
-        this.service.deleteProduct(id).subscribe(data => {
+        this.productService.deleteProduct(id).subscribe(data => {
           this.router.navigate(['/admin/product-list']);
 
           // 刷新商品列表，刷新数据

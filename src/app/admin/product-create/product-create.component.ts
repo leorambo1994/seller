@@ -18,8 +18,7 @@ export class ProductCreateComponent implements OnInit {
     private service: ProductService
   ) {
     this.myForm = new FormGroup({
-      // id: new FormControl('', [Validators.required]),
-      title: new FormControl('', [Validators.required]),
+      imgUrl: new FormControl('', [Validators.required]),
       detail: new FormControl('', [Validators.required]),
       price: new FormControl('', [Validators.required]),
     });

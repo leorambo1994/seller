@@ -5,7 +5,7 @@
         <thead>
             <tr>
                 <!-- <th> ID </th> -->
-                <th> 名称 </th>
+                <th> 图片 </th>
                 <th> 详情 </th>
                 <th> 价格 </th>
                 <th> 操作 </th>
@@ -13,8 +13,7 @@
         </thead>
         <tbody>
             <tr *ngFor="let product of products">
-                <!-- <td>{{ product.id }}</td> -->
-                <td>{{ product.title }}</td>
+                <img src="{{ product.imgUrl }}" width="107" height="60" alt="{{ product.detail }}">
                 <td>{{ product.detail }}</td>
                 <td>{{ product.price }}</td>
                 <td>

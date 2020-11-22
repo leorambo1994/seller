@@ -5,8 +5,8 @@
     <form [formGroup]="myForm" (ngSubmit) = "onSubmit()" >
 
         <div class="form-group">
-            <label for="title"> </label>
-            <input type="text" class="form-control" formControlName="name" placeholder="名称" name="title" id="name">
+            <label for="name"> </label>
+            <input type="text" class="form-control" formControlName="name" placeholder="名称" name="name" id="name">
             <div class="text-danger" *ngIf="myForm.controls.name.invalid && myForm.controls.name.dirty">商品名称不能为空</div>
         </div>
 
