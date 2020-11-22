@@ -39,6 +39,5 @@ export class ProductService {
   deleteProduct( id ){
     return this.http.delete(this.baseUrl + '/' + id);
   }
-   
   // 以上所有的返回都是一个对象，Observable
 }

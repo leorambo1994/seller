@@ -1,8 +1,8 @@
 <ul nz-menu nzMode="inline" class="sider-menu" nzTheme="dark" >
-    <li nz-submenu nzOpen nzIcon="user" nzTitle="用户中心">
+    <li nz-submenu nzIcon="user" nzTitle="用户中心">
 
       <ul>
-        <li nz-menu-item nzSelected>用户列表</li>
+        <li nz-menu-item>用户列表</li>
         <li nz-menu-item>新增用户</li>
       </ul>
 
@@ -24,10 +24,10 @@
       </ul>
     </li>
     
-    <li nz-submenu nzTitle="商品中心" nzIcon="notification">
+    <li nz-submenu nzOpen nzTitle="商品中心" nzIcon="notification">
       <ul>
 
-        <li nz-menu-item>
+        <li nz-menu-item nzSelected>
           <a [routerLink]="['./product-list']" routerLinkActive="router-link-active" >
             商品列表
           </a>

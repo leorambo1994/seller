@@ -72,9 +72,9 @@ export class RegisterComponent implements OnInit {
         Validators.required
       ]],
 
-      smscode: [null, [
-        Validators.required
-      ]],
+      // smscode: [null, [
+      //   Validators.required
+      // ]],
 
       password: [null, [
         Validators.required,
@@ -123,7 +123,8 @@ export class RegisterComponent implements OnInit {
         username: this.validateForm.controls.userName.value,
         password: this.validateForm.controls.password.value,
         email: this.validateForm.controls.email.value,
-        smscode: this.validateForm.controls.smscode.value,
+        mobile: this.validateForm.controls.mobile.value,
+        // smscode: this.validateForm.controls.smscode.value,
 
       };
 

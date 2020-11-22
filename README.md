@@ -1,3 +1,55 @@
+
+## Installation
+
+### Clone repository
+
+```bash
+git clone https://github.com/leorambo1994/seller.git
+```
+
+### Install Angular-Cli globally
+
+```bash
+npm install -g @angular/cli
+```
+
+### Install NPM packages
+
+```bash
+cd seller
+npm install
+```
+
+### Run development server
+
+```bash
+ng serve
+```
+
+Runs a webpack-development server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+
+Executes the unit tests via [Karma](https://karma-runner.github.io).
+
+### Running end-to-end tests
+
+```bash
+ng e2e
+```
+
+Executes the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+### Build app for prod
+
+```bash
+ng build --prod --build-optimizer
+```
+
+
+
+
+
+
 最重要Tip: 想要成功引入 NgZorroAntdModule 模块，必须自己建立一个ng-zorro-antd.module.ts 文件 ，并在 app.module.ts 中 imports，
           否则所有样式不会生效！切记！
 
