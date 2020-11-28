@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
 // 导入路由事件
-import { 
+import {
   NavigationStart,
   NavigationEnd,
   NavigationError,
   NavigationCancel,
   Router,
-  Event } from '@angular/router';
+  Event
+} from '@angular/router';
 
-  import {SlimLoadingBarService} from 'ng2-slim-loading-bar';
+import { SlimLoadingBarService } from 'ng2-slim-loading-bar';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +19,10 @@ import {
 export class AppComponent {
   title = 'ng-HTTP-Server01';
 
-  constructor(private _loadingBar: SlimLoadingBarService, private _router: Router) {
+  constructor(
+    private _loadingBar: SlimLoadingBarService, 
+    private _router: Router ,
+    ) {
     this._router.events.subscribe((event: Event) => {
       this.navigationInterceptor(event);
     });
@@ -37,5 +41,4 @@ export class AppComponent {
       this._loadingBar.stop();
     }
   }
-  
 }

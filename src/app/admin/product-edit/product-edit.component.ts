@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup,FormControl,Validators } from "@angular/forms";
 import { ProductService } from "../product.service";
 import { Router,ActivatedRoute } from "@angular/router";
 

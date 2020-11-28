@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
@@ -10,7 +11,10 @@ export class AuthService {
   baseUrl : string = 'http://localhost:3000/users';
   // baseUrl : string = '/users';
 
-  constructor( private http : HttpClient ) { }
+  constructor( 
+    private http : HttpClient ,
+    private router : Router 
+    ) { }
 
 
   // user login   对象 obj: {username , password}
@@ -61,7 +65,10 @@ export class AuthService {
   logout() {
 
     this.isLogin = false;
-    sessionStorage.removeItem('status');  // 清楚登录状态
+    sessionStorage.removeItem('status');  // 清除登录状态
+    setTimeout(() => {
+      this.router.navigate(['/login']);
+    }, 2000);
 
   }
 }

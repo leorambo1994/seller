@@ -23,6 +23,10 @@ import { NZ_ICONS, NzIconModule } from 'ng-zorro-antd/icon';
 import { NZ_I18N, en_US } from 'ng-zorro-antd/i18n';
 import { IconDefinition } from '@ant-design/icons-angular';
 import * as AllIcons from '@ant-design/icons-angular/icons';
+import { UserListComponent } from './user-list/user-list.component';
+import { UserRegisterComponent } from './user-register/user-register.component';
+import { UserEditComponent } from './user-edit/user-edit.component';
+import { UserDetailComponent } from './user-detail/user-detail.component';
 
 
 
@@ -47,6 +51,10 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => antDesign
     BannerCreateComponent,
     BannerEditComponent,
     BannerDetailComponent,
+    UserListComponent,
+    UserRegisterComponent,
+    UserEditComponent,
+    UserDetailComponent,
   ],
   imports: [
     CommonModule,

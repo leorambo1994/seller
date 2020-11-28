@@ -10,6 +10,10 @@ import { BannerListComponent } from './banner-list/banner-list.component';
 import { BannerCreateComponent } from './banner-create/banner-create.component';
 import { BannerEditComponent } from './banner-edit/banner-edit.component';
 import { BannerDetailComponent } from './banner-detail/banner-detail.component';
+import { UserListComponent } from './user-list/user-list.component';
+import { UserRegisterComponent } from './user-register/user-register.component';
+import { UserEditComponent } from './user-edit/user-edit.component';
+import { UserDetailComponent } from './user-detail/user-detail.component';
 
 const routes: Routes = [
 
@@ -32,6 +36,10 @@ const routes: Routes = [
       { path: 'product-create', component: ProductCreateComponent },
       { path: 'product-edit/:id' , component : ProductEditComponent  },
       { path: 'product-detail', component: ProductDetailComponent },
+      { path: 'user-list', component: UserListComponent },
+      { path: 'user-register', component: UserRegisterComponent },
+      { path: 'user-edit/:id', component: UserEditComponent },
+      { path: 'user-detail', component: UserDetailComponent },
       // { path: '../admin', component: ProductListComponent },
       { path: '**', component: ProductListComponent }
     ] 

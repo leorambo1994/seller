@@ -1,6 +1,9 @@
 <nz-layout>
 
-  <app-topbar></app-topbar>
+  <app-topbar>
+    <a [routerLink]="['/login']" routerLinkActive="router-link-active" class="btn btn-link"> 退出 </a>
+    <button type="button" class="btn btn-danger" (click)="logout()"> 退出 </button>
+  </app-topbar>
 
   <nz-layout>
     <nz-sider nzWidth="200px" nzTheme="light">
