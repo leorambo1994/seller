@@ -1,0 +1,51 @@
+<div class="container">
+    <a [routerLink]="['/user-register']" routerLinkActive="router-link-active" class="btn btn-info"> 创建用户 </a>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <!-- <th> ID </th> -->
+                <th> 用户名 </th>
+                <th> 密码 </th>
+                <th> 邮箱 </th>
+                <th> TEL </th>
+            </tr>
+        </thead>
+        <tbody *ngIf="users.length; else noUsers">
+            <tr *ngFor="let user of users">
+                <td>{{ user.username }}</td>
+                <td>{{ user.password }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.mobile }}</td>
+                <td>
+                    <!-- <button class="btn btn-primary" (click)="editProduct( product )" > 编辑 </button> -->
+
+                    <!-- <a class="btn btn-primary" [routerLink]="['/product-edit/' , product.id]"> 编辑 </a> -->
+
+                    <!-- <a class="btn btn-primary" [routerLink]="['/product-edit/']" [queryParams]="{id : product.id}"> 编辑 </a> -->
+
+                    <!-- <button class="btn btn-danger" 
+                    style="margin-left: 2rem;" (click)="deleteProduct(product.id)" > 删除 </button> -->
+
+                    <!-- <button nz-button nzType="primary" (click)="editProduct( product )" > 编辑 </button> -->
+
+                    <a [routerLink]="['/user-edit' , user._id]" routerLinkActive="router-link-active"
+                        class="btn btn-primary"> 编辑 </a>
+
+                    <button class="btn btn-danger" style="margin-left: 2rem;" (click)="deleteUser(user._id)"> 删除
+                    </button>
+                    <!-- <button nz-button nzType="primary" nzDanger style="margin-left: 2rem;" (click)="deleteProduct(product._id)" > 删除 </button> -->
+                </td>
+            </tr>
+
+        </tbody>
+        <ng-template #noUsers>
+            <tbody>
+                <tr>
+                    <td colspan="5">There are no users...</td>
+                </tr>
+            </tbody>
+        </ng-template>
+    </table>
+
+</div>

@@ -1,0 +1,33 @@
+<div class="container">
+
+    <h2 class="text-center text-danger"> 修改用户 </h2>
+
+    <!-- 模板驱动 -->
+    <form (ngSubmit)="updateUser()" #userForm="ngForm">
+        <div class="form-group">
+            <label for="username"> 用户名 </label>
+            <input type="text" class="form-control" [(ngModel)]="user.username" placeholder="用户名" name="username" id="username" required>
+        </div>
+
+        <div class="form-group">
+            <label for="password"> 密码 </label>
+            <input type="password" class="form-control" [(ngModel)]="user.password" placeholder="密码" name="password" id="password" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email"> 邮箱 </label>
+            <input type="text" class="form-control" [(ngModel)]="user.email" placeholder="邮箱" name="email" id="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="mobile"> TEL </label>
+            <input type="text" class="form-control" [(ngModel)]="user.mobile" placeholder="TEL" name="mobile" id="mobile" required>
+        </div>
+
+        <button type="submit" class="btn btn-danger" [disabled]="!userForm.valid"> 确定 </button>
+
+        <a [routerLink]="['/admin/user-list']" routerLinkActive="router-link-active"  class="btn btn-primary float-right"> 返回 </a>
+
+    </form>
+
+</div>
